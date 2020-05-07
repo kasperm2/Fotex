@@ -23,9 +23,6 @@ body {
 
 
 /* Menu */
-header, main, footer {
-  padding-left: 310px;
-}
 
 nav {
   background-color: #fff;
@@ -185,14 +182,25 @@ input placeholder{
   padding:0 8px;
   color: var(--blue);
   font-weight: 400;
-  border-bottom: 1px solid var(--lightgrey);
   width: 85%;
   margin-left: 5%;
 }
 
+.submenu-head{
+  font-weight: 800 !important;
+  width: 100%;
+  position: relative;
+  text-transform: uppercase;
+  margin-top: 4px !important;
+  margin-bottom: 0px !important;
+}
+
+
+
 .submenu1{
   width: 100%;
   position: relative;
+  border-bottom: 1px solid var(--lightgrey);
 }
 
 .sidenav li>a>img{
@@ -200,5 +208,11 @@ input placeholder{
   position: absolute;
   right: 10%;
   top: 27%;
+}
 
+
+/* Forside */
+
+.main-wrapper{
+  margin: 0 8px;
 }
