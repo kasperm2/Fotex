@@ -1,3 +1,5 @@
+"use strict";
+
 
 // Intailize Materialize sidenav
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,6 +33,191 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems);
   });
+
+// carousel
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems);
+});
+
+
+var instance = M.Carousel.init({
+  fullWidth: true,
+  indicators: true
+ });
+
+
+ // Append products Json
+
+ let products = [];
+
+
+fetch('json/main.json')
+.then(function(response) {
+  return response.json();
+})
+.then(function(json) {
+  console.log(json);
+  products = json;
+  appendProducts(products);
+})
+
+function appendProducts(productArray) {
+  let htmlTemplate = "";
+
+  for (let product of productArray) {
+    console.log(product);
+    htmlTemplate += `
+    <div class="produkter-4">
+      <h2>Tilbud udvalgt til dig</h2>
+      <div class="align2">
+        <div class="produkt">
+          <div class="tilbud">
+            <h6>Tilbud</h6>
+          </div>
+          <div class="badgets-wish">
+            <img src="images/wish.png" alt="ønskeseddel">
+          </div>
+          <img class="produkt-billede" src="${product.img}" alt="produkt-billede">
+          <div class="produkt-tekst">
+            <h4>${product.productname}</h4>
+            <p>${product.text}.</p>
+          </div>
+
+            <div class="pris">
+              <h2>${product.price} kr.</h2>
+            </div>
+
+            <div class="align-bottom">
+              <p class="fromprice">${product.fromprice} kr.</p>
+              <div class="placement">
+              <img src="images/green-circle.png" alt="på lager">
+              <p>Online (+20)</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="produkt">
+          <div class="tilbud">
+            <h6>Tilbud</h6>
+          </div>
+          <div class="badgets-wish">
+            <img src="images/wish.png" alt="ønskeseddel">
+          </div>
+          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
+          <div class="produkt-tekst">
+            <h4>HP 14" bærbar - Sølv</h4>
+            <p>Pålidelig bærbar pc med<br>
+              et slankt, smart design.</p>
+          </div>
+          <div class="pris">
+            <h2>2.199 kr.</h2>
+          </div>
+
+          <div class="align-bottom">
+            <p class="fromprice">3.199 kr.</p>
+            <div class="placement">
+            <img src="images/green-circle.png" alt="på lager">
+            <p>Online (+20)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="align2">
+        <div class="produkt">
+          <div class="tilbud">
+            <h6>Tilbud</h6>
+          </div>
+          <div class="badgets-wish">
+            <img src="images/wish.png" alt="ønskeseddel">
+          </div>
+          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
+          <div class="produkt-tekst">
+            <h4>HP 14" bærbar - Sølv</h4>
+            <p>Pålidelig bærbar pc med<br>
+              et slankt, smart design.</p>
+          </div>
+          <div class="pris">
+            <h2>2.199 kr.</h2>
+          </div>
+
+          <div class="align-bottom">
+            <p class="fromprice">3.199 kr.</p>
+            <div class="placement">
+            <img src="images/green-circle.png" alt="på lager">
+            <p>Online (+20)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="produkt">
+          <div class="tilbud">
+            <h6>Tilbud</h6>
+          </div>
+          <div class="badgets-wish">
+            <img src="images/wish.png" alt="ønskeseddel">
+          </div>
+          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
+          <div class="produkt-tekst">
+            <h4>HP 14" bærbar - Sølv</h4>
+            <p>Pålidelig bærbar pc med<br>
+              et slankt, smart design.</p>
+          </div>
+          <div class="pris">
+            <h2>2.199 kr.</h2>
+          </div>
+
+          <div class="align-bottom">
+            <p class="fromprice">3.199 kr.</p>
+            <div class="placement">
+            <img src="images/green-circle.png" alt="på lager">
+            <p>Online (+20)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    `;
+  }
+  document.querySelector("#products-container").innerHTML = htmlTemplate;
+}
+
+appendProducts(products);
+
+function addNewProduct() {
+  let productname = document.querySelector("#productname").value;
+  let text = document.querySelector("#text").value;
+  let price = document.querySelector("#price").value;
+  let img = document.querySelector("#img").value;
+  let fromprice = document.querySelector("#fromprice").value;
+  let tilbud = document.querySelector("#tilbud").value;
+
+  let newProduct = {
+    brand: brand,
+    model: model,
+    price: price,
+    img: img,
+    fromprice: fromprice,
+    tilbud: tilbud,
+  };
+  products.push(newProduct);
+  console.log(newProduct);
+  appendProducts(products);
+  document.querySelector("#model").value = "";
+  document.querySelector("#brand").value = "";
+  document.querySelector("#price").value = "";
+  document.querySelector("#img").value = "";
+  document.querySelector("#fromprice").value = "";
+  document.querySelector("#tilbud").value = "";
+
+  showPage("products");
+};
+
 
 
 
