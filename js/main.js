@@ -3,36 +3,36 @@
 
 // Intailize Materialize sidenav
 document.addEventListener('DOMContentLoaded', function() {
-   var elems = document.querySelectorAll('.sidenav');
-   let options = {
-     edge: 'left'
-   };
-   var instances = M.Sidenav.init(elems, options);
- });
+  var elems = document.querySelectorAll('.sidenav');
+  let options = {
+    edge: 'left'
+  };
+  var instances = M.Sidenav.init(elems, options);
+});
 
 // Search function
 
- function search(value) {
-   let searchQuery = value.toLowerCase();
-   let filteredProducts = [];
-   for (let product of products) {
-     let model = product.model.toLowerCase();
-     let brand = product.brand.toLowerCase();
+function search(value) {
+  let searchQuery = value.toLowerCase();
+  let filteredProducts = [];
+  for (let product of products) {
+    let model = product.model.toLowerCase();
+    let brand = product.brand.toLowerCase();
 
-     if (model.includes(searchQuery) || brand.includes(searchQuery)) {
-       filteredProducts.push(product);
-     }
-   }
-   appendProducts(filteredProducts);
+    if (model.includes(searchQuery) || brand.includes(searchQuery)) {
+      filteredProducts.push(product);
+    }
+  }
+  appendProducts(filteredProducts);
 
- }
+}
 
- // Collapsible
+// Collapsible
 
- document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems);
+});
 
 // carousel
 
@@ -45,23 +45,23 @@ document.addEventListener('DOMContentLoaded', function() {
 var instance = M.Carousel.init({
   fullWidth: true,
   indicators: true
- });
+});
 
 
- // Append products Json
+// Append products Json
 
- let products = [];
+let products = [];
 
 
 fetch('json/main.json')
-.then(function(response) {
-  return response.json();
-})
-.then(function(json) {
-  console.log(json);
-  products = json;
-  appendProducts(products);
-})
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(json) {
+    console.log(json);
+    products = json;
+    appendProducts(products);
+  })
 
 function appendProducts(productArray) {
   let htmlTemplate = "";
@@ -69,9 +69,6 @@ function appendProducts(productArray) {
   for (let product of productArray) {
     console.log(product);
     htmlTemplate += `
-    <div class="produkter-4">
-      <h2>Tilbud udvalgt til dig</h2>
-      <div class="align2">
         <div class="produkt">
           <div class="tilbud">
             <h6>Tilbud</h6>
@@ -89,6 +86,10 @@ function appendProducts(productArray) {
               <h2>${product.price} kr.</h2>
             </div>
 
+            `;
+
+    if (product.fromprice != null) {
+      htmlTemplate += `
             <div class="align-bottom">
               <p class="fromprice">${product.fromprice} kr.</p>
               <div class="placement">
@@ -96,93 +97,24 @@ function appendProducts(productArray) {
               <p>Online (+20)</p>
               </div>
             </div>
-        </div>
+         `;
 
-        <div class="produkt">
-          <div class="tilbud">
-            <h6>Tilbud</h6>
-          </div>
-          <div class="badgets-wish">
-            <img src="images/wish.png" alt="ønskeseddel">
-          </div>
-          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
-          <div class="produkt-tekst">
-            <h4>HP 14" bærbar - Sølv</h4>
-            <p>Pålidelig bærbar pc med<br>
-              et slankt, smart design.</p>
-          </div>
-          <div class="pris">
-            <h2>2.199 kr.</h2>
-          </div>
-
-          <div class="align-bottom">
-            <p class="fromprice">3.199 kr.</p>
-            <div class="placement">
-            <img src="images/green-circle.png" alt="på lager">
-            <p>Online (+20)</p>
-            </div>
-          </div>
-        </div>
-
+    } else {
+      htmlTemplate += `
+    <div class="align-bottom">
+      <div class="placement">
+      <img src="images/green-circle.png" alt="på lager">
+      <p>Online (+20)</p>
       </div>
-
-      <div class="align2">
-        <div class="produkt">
-          <div class="tilbud">
-            <h6>Tilbud</h6>
-          </div>
-          <div class="badgets-wish">
-            <img src="images/wish.png" alt="ønskeseddel">
-          </div>
-          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
-          <div class="produkt-tekst">
-            <h4>HP 14" bærbar - Sølv</h4>
-            <p>Pålidelig bærbar pc med<br>
-              et slankt, smart design.</p>
-          </div>
-          <div class="pris">
-            <h2>2.199 kr.</h2>
-          </div>
-
-          <div class="align-bottom">
-            <p class="fromprice">3.199 kr.</p>
-            <div class="placement">
-            <img src="images/green-circle.png" alt="på lager">
-            <p>Online (+20)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="produkt">
-          <div class="tilbud">
-            <h6>Tilbud</h6>
-          </div>
-          <div class="badgets-wish">
-            <img src="images/wish.png" alt="ønskeseddel">
-          </div>
-          <img class="produkt-billede" src="images/hp-pc.png" alt="produkt-billede">
-          <div class="produkt-tekst">
-            <h4>HP 14" bærbar - Sølv</h4>
-            <p>Pålidelig bærbar pc med<br>
-              et slankt, smart design.</p>
-          </div>
-          <div class="pris">
-            <h2>2.199 kr.</h2>
-          </div>
-
-          <div class="align-bottom">
-            <p class="fromprice">3.199 kr.</p>
-            <div class="placement">
-            <img src="images/green-circle.png" alt="på lager">
-            <p>Online (+20)</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-    `;
+
+   `;
+    }
+
+    htmlTemplate += "</div>";
+
+
+
   }
   document.querySelector("#products-container").innerHTML = htmlTemplate;
 }
@@ -222,5 +154,5 @@ function addNewProduct() {
 
 
 // setTimeout(function () {
- //resizeAllGridItems();
+//resizeAllGridItems();
 //}, 50);

@@ -26,7 +26,7 @@ body {
 h2{
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Montserrat';
+  font-family: 'chevin';
   color: var(--blue);
   margin: 0px;
   line-height: 22px;
@@ -34,6 +34,11 @@ h2{
 
 h1, h2, h3, h4, h5, h6{
   margin: 0;
+  font-family: 'chevin';
+}
+
+p{
+  font-family: 'chevin';
 }
 
 
@@ -266,12 +271,11 @@ a .tilbudsavis {
   margin-top: -1px;
 }
 
-.video-hero h1{
-  margin: 0;
-  font-size: 48px;
-  text-align: center;
-  color: #fff;
-  padding-top: 40px;
+.video-hero img {
+  margin: auto;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .usp-box{
@@ -403,7 +407,7 @@ a .tilbudsavis {
 
 .image-text h3{
   color: #fff;
-  padding-top: 35%;
+  padding-top: 30%;
   font-size: 22px;
   font-weight: 500;
   padding-left: 20px;
@@ -416,7 +420,7 @@ a .tilbudsavis {
   border-radius: 3px;
   margin-left: 20px;
   margin-top: 8px;
-  padding: 5px 10px 5px 10px;
+  padding: 8px 10px 8px 10px;
   text-align: center;
 }
 
@@ -610,15 +614,18 @@ a .tilbudsavis {
   width: 100%;
   display: flex;
   margin-top: 8px;
+  flex-wrap: wrap;
+  flex-direction: row !important;
 }
 
 
 .produkt{
-  width: 49%;
+  width: 47.5% !important;
   box-shadow: 0px 2px 4px #0000002e;
   border-radius: 4px;
   margin-right: 8px;
   position: relative;
+  margin-bottom: 8px;
 }
 
 .tilbud{
@@ -649,8 +656,8 @@ a .tilbudsavis {
 
 .produkt-billede{
   padding-top: 30px;
-  width: 90%;
   padding-left: 20px;
+  width: 90%;
 }
 
 .produkt-tekst h4{
@@ -696,4 +703,236 @@ a .tilbudsavis {
   padding: 0 0 0 8px;
   text-decoration: line-through;
   justify-content: flex-start;
+}
+
+.click-collect{
+  margin: 0 8px;
+}
+
+#pose{
+  margin: auto;
+  width: 100%;
+  margin-top: 32px;
+}
+
+#tekst-click{
+  padding-left: 33px;
+  margin-top: -130px;
+  padding-top: 145px;
+  padding-bottom: 30px;
+}
+
+#tekst-click p, #nr2-2 p, #nr3-3 p, #nr1-1 p{
+  color: var(--blue);
+}
+
+.color{
+  color: #e4e2e0 !important;
+  padding-top: 0 !important;
+}
+
+#nr2-2, #nr3-3, #nr1-1{
+  display: flex;
+  padding-top: 10px;
+}
+
+#nr1-1 p, #nr2-2 p, #nr3-3 p{
+  padding-top: 18px;
+}
+
+#tekst-click h2{
+  padding-bottom: 8px;
+}
+
+#subhead{
+  font-size: 16px;
+}
+
+
+.button2{
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: -20px;
+}
+
+#tekst-click, #nr1-1, #nr2-2, #nr3-3{
+  background-color: var(--uisand);
+}
+
+
+/* Footer */
+
+footer{
+  background-image: url(/images/footer-bg.png);
+  color: #fff;
+  margin-top: 16px;
+}
+
+#logos{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.row1, .row2, .row3{
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.row1 a, .row2 a, .row3 a{
+  color: #b9b9b9;
+  padding-top: 8px;
+}
+
+.row1 h4, .row2 h4, .row3 h4{
+  padding-top: 32px;
+  font-size: 18px;
+}
+
+.row3{
+  padding-bottom: 32px;
+}
+
+.collapsible-header{
+  background-color: #4c4c4c;
+  border: none;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  font-family: 'chevin';
+  font-weight: 600;
+}
+
+.collapsible{
+  border: none;
+}
+
+.collapsible li{
+  margin: 0 16px 8px 16px;
+}
+
+
+/* fonts */
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-bold-webfont.eot');
+    src: url('../fonts/chevin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-bold-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-bold-webfont.woff') format('woff'),
+         url('../fonts/chevin-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-bolditalic-webfont.eot');
+    src: url('../fonts/chevin-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-demibold-webfont.eot');
+    src: url('../fonts/chevin-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-demibold-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-demibold-webfont.woff') format('woff'),
+         url('../fonts/chevin-demibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-demibolditalic-webfont.eot');
+    src: url('../fonts/chevin-demibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-demibolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-demibolditalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-demibolditalic-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-light-webfont.eot');
+    src: url('../fonts/chevin-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-light-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-light-webfont.woff') format('woff'),
+         url('../fonts/chevin-light-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-lightitalic-webfont.eot');
+    src: url('../fonts/chevin-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-lightitalic-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-medium-webfont.eot');
+    src: url('../fonts/chevin-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-medium-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-medium-webfont.woff') format('woff'),
+         url('../fonts/chevin-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-mediumitalic-webfont.eot');
+    src: url('../fonts/chevin-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-mediumitalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-mediumitalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-mediumitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
 }
