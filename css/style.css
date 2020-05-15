@@ -42,6 +42,7 @@ p{
 }
 
 
+
 /* Menu */
 
 nav {
@@ -54,7 +55,7 @@ nav {
 }
 
 .sidenav a, .sidenav>li>a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'chevin', sans-serif;
   font-size: 16px;
   margin-left: 50px;
 }
@@ -226,10 +227,10 @@ input placeholder{
 }
 
 .sidenav li>a>img{
-  width: 10px;
+  width: 8px;
   position: absolute;
   right: 10%;
-  top: 27%;
+  top: 35%;
 }
 
 
@@ -602,7 +603,14 @@ a .tilbudsavis {
 
 .produkter-4 h2{
   text-align: center;
-  margin-top: 32px;
+  position: absolute;
+  bottom: 30px;
+}
+
+#heading4{
+  position: relative;
+  padding-top: 64px;
+  margin-bottom: -15px;
 }
 
 .produkter-4{
@@ -626,6 +634,7 @@ a .tilbudsavis {
   margin-right: 8px;
   position: relative;
   margin-bottom: 8px;
+  height: 300px;
 }
 
 .tilbud{
@@ -683,6 +692,8 @@ a .tilbudsavis {
 .align-bottom{
   display: flex;
   width: 100%;
+  position: absolute;
+  bottom: 0px;
 }
 
 .placement{
@@ -803,7 +814,7 @@ footer{
 
 .collapsible-header{
   background-color: #4c4c4c;
-  border: none;
+  border: 1px solid #b9b9b9;
   text-align: center;
   margin: auto;
   width: 100%;
@@ -819,6 +830,78 @@ footer{
 
 .collapsible li{
   margin: 0 16px 8px 16px;
+}
+
+.aabningstider h4{
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  font-size: 18px;
+}
+
+.collapsible-body > ul > li > a{
+  color: #fff;
+  font-family: 'chevin';
+  width: 100%;
+  font-size: 16px;
+}
+
+.collapsible-body > ul > li{
+  text-align: center;
+}
+.collapsible-body {
+ background-color: #4c4c4c;
+ border-bottom: none;
+}
+
+.collapsible-header img{
+  width: 14px;
+  transform: rotate(90deg);
+  color: #fff;
+  margin-left: 30px;
+  vertical-align: bottom;
+}
+
+
+.tider p{
+  width: 100%;
+  text-align: center;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  padding-top: 16px;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.social h4{
+  font-size: 18px;
+  padding-right: 16px;
+}
+
+.social img{
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.korttyper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.korttyper img{
+  width: 40px;
+  margin-right: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#mp{
+  width: 90px !important;
 }
 
 

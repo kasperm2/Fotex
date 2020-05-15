@@ -16,10 +16,9 @@ function search(value) {
   let searchQuery = value.toLowerCase();
   let filteredProducts = [];
   for (let product of products) {
-    let model = product.model.toLowerCase();
-    let brand = product.brand.toLowerCase();
+    let productname = product.productname.toLowerCase();
 
-    if (model.includes(searchQuery) || brand.includes(searchQuery)) {
+    if (productname.includes(searchQuery)) {
       filteredProducts.push(product);
     }
   }
@@ -70,9 +69,7 @@ function appendProducts(productArray) {
     console.log(product);
     htmlTemplate += `
         <div class="produkt">
-          <div class="tilbud">
-            <h6>Tilbud</h6>
-          </div>
+
           <div class="badgets-wish">
             <img src="images/wish.png" alt="ønskeseddel">
           </div>
@@ -87,6 +84,14 @@ function appendProducts(productArray) {
             </div>
 
             `;
+
+            if (product.tilbud != false) {
+              htmlTemplate += `
+              <div class="tilbud">
+                <h6>Tilbud</h6>
+              </div>
+              `;
+            }
 
     if (product.fromprice != null) {
       htmlTemplate += `
@@ -130,8 +135,8 @@ function addNewProduct() {
   let tilbud = document.querySelector("#tilbud").value;
 
   let newProduct = {
-    brand: brand,
-    model: model,
+    text: text,
+    productname: productname,
     price: price,
     img: img,
     fromprice: fromprice,
@@ -140,8 +145,8 @@ function addNewProduct() {
   products.push(newProduct);
   console.log(newProduct);
   appendProducts(products);
-  document.querySelector("#model").value = "";
-  document.querySelector("#brand").value = "";
+  document.querySelector("#text").value = "";
+  document.querySelector("#productname").value = "";
   document.querySelector("#price").value = "";
   document.querySelector("#img").value = "";
   document.querySelector("#fromprice").value = "";
