@@ -22,7 +22,7 @@ function search(value) {
       filteredProducts.push(product);
     }
   }
-  appendProducts(filteredProducts);
+  appendProducts(filteredProducts, "products-search-container");
 
 }
 
@@ -59,10 +59,10 @@ fetch('json/main.json')
   .then(function(json) {
     console.log(json);
     products = json;
-    appendProducts(products);
+    appendProducts(products, "products-container");
   })
 
-function appendProducts(productArray) {
+function appendProducts(productArray, containerId) {
   let htmlTemplate = "";
 
   for (let product of productArray) {
@@ -121,10 +121,9 @@ function appendProducts(productArray) {
 
 
   }
-  document.querySelector("#products-container").innerHTML = htmlTemplate;
+  document.querySelector("#"+ containerId).innerHTML = htmlTemplate;
 }
 
-appendProducts(products);
 
 function addNewProduct() {
   let productname = document.querySelector("#productname").value;
