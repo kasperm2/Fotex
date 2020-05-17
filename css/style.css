@@ -245,6 +245,7 @@ a .tilbudsavis {
   width: 100%;
   background-image: url("/images/fotex-tape-gul.png");
   display: flex;
+  background-size: cover;
 }
 
  a .tilbudsavis img{
@@ -274,6 +275,7 @@ a .tilbudsavis {
   background-image: url("/images/topvideo.png");
   height: 193px;
   margin-top: -1px;
+  background-size: cover;
 }
 
 .video-hero img {
@@ -906,6 +908,16 @@ footer{
 
 #mp{
   width: 90px !important;
+}
+
+@media only screen and (max-width: 374px) {
+  input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    width: 27.5%;
+
+    .Foetex-plus img{
+      padding: 0;
+    }
+
 }
 
 
