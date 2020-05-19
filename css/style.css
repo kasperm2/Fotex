@@ -1,3 +1,118 @@
+/* fonts */
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-bold-webfont.eot');
+    src: url('../fonts/chevin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-bold-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-bold-webfont.woff') format('woff'),
+         url('../fonts/chevin-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-bolditalic-webfont.eot');
+    src: url('../fonts/chevin-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-demibold-webfont.eot');
+    src: url('../fonts/chevin-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-demibold-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-demibold-webfont.woff') format('woff'),
+         url('../fonts/chevin-demibold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-demibolditalic-webfont.eot');
+    src: url('../fonts/chevin-demibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-demibolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-demibolditalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-demibolditalic-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-light-webfont.eot');
+    src: url('../fonts/chevin-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-light-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-light-webfont.woff') format('woff'),
+         url('../fonts/chevin-light-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-lightitalic-webfont.eot');
+    src: url('../fonts/chevin-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-lightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-lightitalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-lightitalic-webfont.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-medium-webfont.eot');
+    src: url('../fonts/chevin-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-medium-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-medium-webfont.woff') format('woff'),
+         url('../fonts/chevin-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'chevin';
+    src: url('../fonts/chevin-mediumitalic-webfont.eot');
+    src: url('../fonts/chevin-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chevin-mediumitalic-webfont.woff2') format('woff2'),
+         url('../fonts/chevin-mediumitalic-webfont.woff') format('woff'),
+         url('../fonts/chevin-mediumitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
 /* Generel styling */
 :root {
   --blue: #1d2f54;
@@ -917,121 +1032,5 @@ footer{
     .Foetex-plus img{
       padding: 0;
     }
-
-}
-
-
-/* fonts */
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-bold-webfont.eot');
-    src: url('../fonts/chevin-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-bold-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-bold-webfont.woff') format('woff'),
-         url('../fonts/chevin-bold-webfont.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-bolditalic-webfont.eot');
-    src: url('../fonts/chevin-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-bolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-bolditalic-webfont.woff') format('woff'),
-         url('../fonts/chevin-bolditalic-webfont.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-
-}
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-demibold-webfont.eot');
-    src: url('../fonts/chevin-demibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-demibold-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-demibold-webfont.woff') format('woff'),
-         url('../fonts/chevin-demibold-webfont.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-demibolditalic-webfont.eot');
-    src: url('../fonts/chevin-demibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-demibolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-demibolditalic-webfont.woff') format('woff'),
-         url('../fonts/chevin-demibolditalic-webfont.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-light-webfont.eot');
-    src: url('../fonts/chevin-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-light-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-light-webfont.woff') format('woff'),
-         url('../fonts/chevin-light-webfont.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-lightitalic-webfont.eot');
-    src: url('../fonts/chevin-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-lightitalic-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-lightitalic-webfont.woff') format('woff'),
-         url('../fonts/chevin-lightitalic-webfont.ttf') format('truetype');
-    font-weight: 200;
-    font-style: italic;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-medium-webfont.eot');
-    src: url('../fonts/chevin-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-medium-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-medium-webfont.woff') format('woff'),
-         url('../fonts/chevin-medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'chevin';
-    src: url('../fonts/chevin-mediumitalic-webfont.eot');
-    src: url('../fonts/chevin-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chevin-mediumitalic-webfont.woff2') format('woff2'),
-         url('../fonts/chevin-mediumitalic-webfont.woff') format('woff'),
-         url('../fonts/chevin-mediumitalic-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
 
 }
